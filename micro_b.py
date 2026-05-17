@@ -2,6 +2,18 @@ import oracledb
 
 def cargar_datos(clientes, transacciones, stats):
     try:
+
+        # --------------------------------------------------------------------------
+        # CONFIGURACIÓN DE CONEXIÓN (Modificar el DSN para Duoc UC de ser necesario)
+        # --------------------------------------------------------------------------
+        # Opción Casa:
+        # conn = oracledb.connect(user="Eva2_PID", password="Eva2_PID", dsn="localhost:1521/XEPDB1")
+        
+        # Opción Duoc UC (Usando la base de datos Express Edition 'xe'):
+        #conn = oracledb.connect(user="Eva2_PID", password="Eva2_PID", dsn="localhost:1521/xe")
+        # --------------------------------------------------------------------------
+
+
         conn = oracledb.connect(user="Eva2_PID", password="Eva2_PID", dsn="localhost:1521/XEPDB1")
         cursor = conn.cursor()
 
